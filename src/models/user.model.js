@@ -49,7 +49,7 @@ async function(password){
     )
 }
 
-const UserModel =
+const userModel =
     mongoose.model("User", userSchema)
 
-module.exports = UserModel
+module.exports = userModel
