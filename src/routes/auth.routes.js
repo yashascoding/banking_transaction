@@ -1,6 +1,11 @@
-const express=require("express")
-const router =express.Router()
+const express = require("express")
+const router = express.Router()
+const { userRegisterController, userLoginController } = require("../controller/auth.controller")
 
-router.post("")
+// POST /api/auth/register - Register a new user
+router.post("/register", userRegisterController)
 
-module.exports=router
+// POST /api/auth/login - Login an existing user
+router.post("/login", userLoginController)
+
+module.exports = router
